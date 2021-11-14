@@ -1,0 +1,36 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+repository:
+  # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
+
+  # A comma-separated list of topics to set on the repository
+  topics: DigitalGreyHat
+  
+  # vulnerability alerts.
+  enable_vulnerability_alerts: true
+
+branches:
+  - name: main
+    protection:
+      required_pull_request_reviews:
+        require_code_owner_reviews: true
+        
+        
+labels:
+
+  - { color: 'B60104', name: '🟥 priority: critical',   description: 'Must be fixed ASAP' } # Dark Red
+  - { color: 'ff9f1c', name: '🟧 priority: high',  description: 'Stalls work on the project or its dependents' } # Light Red
+  - { color: 'FFCC02', name: '🟨 priority: medium',       description: 'Not blocking but should be fixed soon' } # Yellow
+  - { color: 'CFDA2C', name: '🟩 priority: low',     description: 'Low priority and doesn't need to be rushed' } # Light Green
+  
+  - { color: '00C0FF', name: 'ci',        description: '' } # Light Blue
+  - { color: '4080FF', name: 'cd',        description: '' } # Blue
+  - { color: 'C080FF', name: 'docs',      description: '' } # Light Purple
+
+  - { color: '000000', name: 'question',  description: '' } # Some light color
+
+  - { color: 'C00000', name: 'blocked',   description: '' } # Red
+  - { color: 'DDDDDD', name: 'duplicate', description: '' } # Gray
+  - { color: 'DDDDDD', name: 'invalid',   description: '' } # Gray
+  - { color: 'DDDDDD', name: 'wontfix',   description: '' } # Gray
+  - { color: 'DDDDDD', name: 'released',  description: '' } # Gray
